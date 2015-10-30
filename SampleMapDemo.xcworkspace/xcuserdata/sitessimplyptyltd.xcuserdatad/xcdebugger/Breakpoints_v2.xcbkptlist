@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleMapDemo/CreateAccount/VCCreateAccount.m"
-            timestampString = "467813042.091604"
+            timestampString = "467892635.535368"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "-createAccountUsingFB:"
             landmarkType = "5">
          </BreakpointContent>

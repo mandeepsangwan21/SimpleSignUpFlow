@@ -5,9 +5,29 @@
 //  Created by SitesSimply PTY. LTD on 29/10/2015.
 //  Copyright © 2015 SitesSimply PTY. LTD. All rights reserved.
 //
+/*
+ #import "JACenterViewController.h"
+ #import "JALeftViewController.h"
+ #import "JARightViewController.h"
+ 
+	self.viewController = [[JASidePanelController alloc] init];
+ self.viewController.shouldDelegateAutorotateToVisiblePanel = NO;
+ 
+	self.viewController.leftPanel = [[JALeftViewController alloc] init];
+	self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[JACenterViewController alloc] init]];
+	self.viewController.rightPanel = [[JARightViewController alloc] init];
+	
+	self.window.rootViewController = self.viewController;
+ [self.window makeKeyAndVisible];
 
+ */
 #import "VCCreateAccount.h"
 #import "FBUtilNew.h"
+#import "JASidePanelController.h"
+#import "VCLeftMenu.h"
+#import "VCRightMenu.h"
+#import "VCCenterDetails.h"
+#import "AppDelegate.h"
 @interface VCCreateAccount ()
 
 @end
@@ -31,6 +51,13 @@
     [FBUtilNew getUserDataFieldsNeededAfterLogin:fieldArray];
     [FBUtilNew loginWithFaceBookWithCompletionBlock:^(id fbResponse, NSError *error){
         if (fbResponse !=nil) {
+   AppDelegate  *appD  = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            appD.viewController.shouldDelegateAutorotateToVisiblePanel = NO;
+            appD.viewController.leftPanel = [[VCLeftMenu alloc] init];
+            appD.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[VCCenterDetails alloc] init]];
+            appD.viewController.rightPanel = [[VCRightMenu alloc] init];
+            appD.window.rootViewController = appD.viewController;
+            [appD.window makeKeyAndVisible];
 //            DDLogVerbose(@"%@",fbResponse);
 //            [self storeUserInfo:fbResponse];
             //call web service

@@ -16,10 +16,11 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    	self.viewController = [[JASidePanelController alloc] init];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     [GMSServices provideAPIKey:@"AIzaSyDsufJZAeoMspS5UCgRFSyEnhc0d8gCZIs"];
