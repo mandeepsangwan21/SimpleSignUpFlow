@@ -90,7 +90,7 @@
                   moduleName = "SampleMapDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sitessimplyptyltd/Documents/iOS%20Projects/SampleMapDemo/SampleMapDemo/AppleMapsViewController.m"
-                  timestampString = "467202532.719909"
+                  timestampString = "467877409.561954"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
@@ -105,7 +105,7 @@
                   moduleName = "SampleMapDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sitessimplyptyltd/Documents/iOS%20Projects/SampleMapDemo/SampleMapDemo/AppleMapsViewController.m"
-                  timestampString = "467202532.720379"
+                  timestampString = "467877409.562116"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
@@ -189,22 +189,6 @@
             timestampString = "467208975.171564"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-googleDirectionAPI"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SampleMapDemo/ViewController.m"
-            timestampString = "467208975.171564"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
             landmarkName = "-googleDirectionAPI"
@@ -234,12 +218,12 @@
                   moduleName = "SampleMapDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sitessimplyptyltd/Documents/iOS%20Projects/SampleMapDemo/SampleMapDemo/ViewController.m"
-                  timestampString = "467202532.725994"
+                  timestampString = "467877409.56691"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "776">
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1410">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -249,11 +233,11 @@
                   moduleName = "SampleMapDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sitessimplyptyltd/Documents/iOS%20Projects/SampleMapDemo/SampleMapDemo/ViewController.m"
-                  timestampString = "467202532.726153"
+                  timestampString = "467877409.567215"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
                   offsetFromSymbolStart = "82">
                </Location>
             </Locations>
@@ -265,29 +249,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SampleMapDemo/ViewController.m"
-            timestampString = "467208975.171564"
+            filePath = "SampleMapDemo/CreateAccount/VCCreateAccount.m"
+            timestampString = "467813042.091604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-getRoutes:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SampleMapDemo/ViewController.m"
-            timestampString = "467208975.171564"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "-googleDirectionAPI"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-createAccountUsingFB:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
