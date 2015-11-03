@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"food3.jpg"]];
+    self.title = @"Food Corner";
 }
 
 - (void)didReceiveMemoryWarning {

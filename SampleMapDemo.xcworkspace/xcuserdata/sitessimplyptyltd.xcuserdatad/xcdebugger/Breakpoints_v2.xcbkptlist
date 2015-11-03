@@ -90,7 +90,7 @@
                   moduleName = "SampleMapDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sitessimplyptyltd/Documents/iOS%20Projects/SampleMapDemo/SampleMapDemo/AppleMapsViewController.m"
-                  timestampString = "468223632.783981"
+                  timestampString = "468225241.531824"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
@@ -105,7 +105,7 @@
                   moduleName = "SampleMapDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sitessimplyptyltd/Documents/iOS%20Projects/SampleMapDemo/SampleMapDemo/AppleMapsViewController.m"
-                  timestampString = "468223632.784176"
+                  timestampString = "468225241.532106"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
@@ -218,7 +218,7 @@
                   moduleName = "SampleMapDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sitessimplyptyltd/Documents/iOS%20Projects/SampleMapDemo/SampleMapDemo/ViewController.m"
-                  timestampString = "468223632.789569"
+                  timestampString = "468225241.540483"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "81"
@@ -233,7 +233,7 @@
                   moduleName = "SampleMapDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sitessimplyptyltd/Documents/iOS%20Projects/SampleMapDemo/SampleMapDemo/ViewController.m"
-                  timestampString = "468223632.789752"
+                  timestampString = "468225241.54068"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "81"
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleMapDemo/LeftMenu/VCLeftMenu.m"
-            timestampString = "467976483.730412"
+            timestampString = "468226740.421945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -265,13 +265,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SampleMapDemo/CreateAccount/VCCreateAccount.m"
-            timestampString = "468221110.149883"
+            filePath = "SampleMapDemo/Profile/VCProfile.m"
+            timestampString = "468225154.205318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-createAccountUsingFB:"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-setProfileInfo"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -282,12 +282,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleMapDemo/Profile/VCProfile.m"
-            timestampString = "468224099.545819"
+            timestampString = "468225175.117853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-setProfileInfo"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleMapDemo/CreateAccount/VCCreateAccount.m"
+            timestampString = "468225223.302858"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-createAccountUsingFB:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

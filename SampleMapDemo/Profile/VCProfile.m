@@ -8,6 +8,7 @@
 
 #import "VCProfile.h"
 #import "UserDefaultController.h"
+#import "UIImageView+WebCache.h"
 @interface VCProfile ()
 {
     UIBarButtonItem *editDone;
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *genderTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePicImageView;
 
 @end
 
@@ -38,7 +40,17 @@
     self.nameTextField.text = [obj getUserName];
     self.genderTextField.text = [obj getUserGender];
     self.emailTextField.text = [obj getUserEmail];
+    NSURL *imageUrl = [NSURL URLWithString:[obj getUserProfilePicURL]];
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     
+    [spinner setCenter:CGPointMake(self.profilePicImageView.frame.size.width/2.0, self.profilePicImageView.frame.size.height/2.0)];
+    [self.profilePicImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"default_avatar12"] options:SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
+        [spinner startAnimating];
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [spinner stopAnimating];
+    }];
+
     //make textfields inactive initially
     self.nameTextField.enabled = NO;
     self.genderTextField.enabled = NO;

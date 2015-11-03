@@ -66,7 +66,7 @@
             [obj setUserEmail:[fbResponse objectForKey:@"email"]];
             [obj setUserGender:[fbResponse objectForKey:@"gender"]];
             [obj setUserName:[fbResponse objectForKey:@"name"]];
-            [obj setUserProfilePicURL:[[fbResponse objectForKey:@"picture"] objectForKeyedSubscript:@"url"]];
+            [obj setUserProfilePicURL:[[[fbResponse objectForKey:@"picture"] objectForKey:@"data"] objectForKey:@"url"]];
 //            DDLogVerbose(@"%@",fbResponse);
 //            [self storeUserInfo:fbResponse];
             //call web service

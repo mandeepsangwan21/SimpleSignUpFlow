@@ -10,6 +10,8 @@
 #import "LeftMenuCell.h"
 #import "LeftMenuData.h"
 #import "VCProfile.h"
+#import "JASidePanelController.h"
+#import "UIViewController+JASidePanel.h"
 CGFloat const HEIGHT_OF_ROW1 = 90.0;
 static NSString *cellIdentifier;
 @interface VCLeftMenu () <UITableViewDataSource,UITableViewDelegate>
@@ -26,7 +28,7 @@ static NSString *cellIdentifier;
     // Do any additional setup after loading the view from its nib.
         self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"food5.jpg"]];
     LeftMenuData *leftMenuDatAObj = [LeftMenuData getInstance];
-    leftMenuDatAObj.menuItems = [[NSMutableArray alloc] initWithObjects:@"Profile",@"Starters",@"Dinner", nil];
+    leftMenuDatAObj.menuItems = [[NSMutableArray alloc] initWithObjects:@"Profile",@"Home",@"Starters",@"Dinner",@"Contact Us",@"About US", nil];
     menuList = leftMenuDatAObj.menuItems;
     self.menuListTable.delegate = self;
     self.menuListTable.dataSource = self;
@@ -86,7 +88,11 @@ static NSString *cellIdentifier;
                              }];
         }
             break;
-            
+        case 1:
+        {
+            [self.sidePanelController showCenterPanelAnimated:YES];
+        }
+            break;
         default:
             break;
     }
