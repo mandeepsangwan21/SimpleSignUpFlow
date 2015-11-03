@@ -28,6 +28,7 @@
 #import "VCRightMenu.h"
 #import "VCCenterDetails.h"
 #import "AppDelegate.h"
+#import "UserDefaultController.h"
 @interface VCCreateAccount ()
 
 @end
@@ -51,6 +52,7 @@
     [FBUtilNew getUserDataFieldsNeededAfterLogin:fieldArray];
     [FBUtilNew loginWithFaceBookWithCompletionBlock:^(id fbResponse, NSError *error){
         if (fbResponse !=nil) {
+            NSLog(@"%@",fbResponse);
    AppDelegate  *appD  = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             appD.viewController.shouldDelegateAutorotateToVisiblePanel = NO;
             appD.viewController.leftPanel = [[VCLeftMenu alloc] init];
@@ -58,6 +60,13 @@
             appD.viewController.rightPanel = [[VCRightMenu alloc] init];
             appD.window.rootViewController = appD.viewController;
             [appD.window makeKeyAndVisible];
+            
+            UserDefaultController *obj = [UserDefaultController getInstance];
+            [obj setCreateAccountCompleted:YES];
+            [obj setUserEmail:[fbResponse objectForKey:@"email"]];
+            [obj setUserGender:[fbResponse objectForKey:@"gender"]];
+            [obj setUserName:[fbResponse objectForKey:@"name"]];
+            [obj setUserProfilePicURL:[[fbResponse objectForKey:@"picture"] objectForKeyedSubscript:@"url"]];
 //            DDLogVerbose(@"%@",fbResponse);
 //            [self storeUserInfo:fbResponse];
             //call web service

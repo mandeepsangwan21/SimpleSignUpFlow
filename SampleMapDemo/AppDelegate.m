@@ -11,6 +11,10 @@
 #import "MapsSelector.h"
 #import "VCLandiScreen.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "UserDefaultController.h"
+#import "VCLeftMenu.h"
+#import "VCRightMenu.h"
+#import "VCCenterDetails.h"
 @interface AppDelegate ()
 
 @end
@@ -24,18 +28,32 @@
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     [GMSServices provideAPIKey:@"AIzaSyDsufJZAeoMspS5UCgRFSyEnhc0d8gCZIs"];
+    [self decideLandingScreen];
+    return YES;
+}
+
+-(void)decideLandingScreen {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
+    UserDefaultController *obj = [UserDefaultController getInstance];
+    [obj setUserDefaults];
+    if([obj getCreateAccountCompleted]) {
+        self.viewController.shouldDelegateAutorotateToVisiblePanel = NO;
+        self.viewController.leftPanel = [[VCLeftMenu alloc] init];
+        self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[VCCenterDetails alloc] init]];
+        self.viewController.rightPanel = [[VCRightMenu alloc] init];
+        self.window.rootViewController = self.viewController;
+        [self.window makeKeyAndVisible];
+        return;
+    }
     VCLandiScreen *baseViewController = [[VCLandiScreen alloc] initWithNibName:@"VCLandiScreen" bundle:nil];
-    
-    
     self.window.rootViewController = baseViewController;
     self.navigationController=[[UINavigationController alloc] initWithRootViewController:baseViewController];
     [self.navigationController setViewControllers:[NSArray arrayWithObject:baseViewController]];
     [self.window addSubview:[self.navigationController view]];
     [self.window makeKeyAndVisible];
 
-    return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
